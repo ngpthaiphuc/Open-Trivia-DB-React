@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Button } from '@material-ui/core';
+import Question from './Question';
+//import { Button } from '@material-ui/core';
 
 /*class App {
     onChangeValue(event) {
@@ -35,25 +36,9 @@ export default function App() {
 
     return (
         <div>
-            
             <h1>Hey, Launch!</h1>
             {questions.map((question) => (
-                <div>
-                    <h1 id="question">{question.question}</h1>
-
-                    <Button id="right" variant="contained" color="default" onClick={() => {
-                        alert('Correct');
-                    }}>{question.correct_answer}</Button>
-                    <Button id="wrong1" variant="contained" color="default" onClick={() => {
-                        alert('Wrong');
-                    }}>{question.incorrect_answers[0]}</Button>
-                    <Button id="wrong2" variant="contained" color="default" onClick={() => {
-                        alert('Wrong');
-                    }}>{question.incorrect_answers[1]}</Button>
-                    <Button id="wrong3" variant="contained" color="default" onClick={() => {
-                        alert('Wrong');
-                    }}>{question.incorrect_answers[2]}</Button>
-                </div>
+                <Question question={question}></Question>
             ))}
         </div>
     );
